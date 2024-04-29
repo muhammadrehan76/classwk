@@ -4,16 +4,17 @@
     font-family: sans-serif;
 }
 body{
-    width: 100;
+    width: 10px;
     height: 100vh;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../image/pexels-pixabay-276514.jpg)
+    background-image: url(../image/pexels-pixabay-276514.jpg) 
     
 }
-#list li{
+#list ul {
     width: 85%;
-    margin: auto;
+    margin-left: 43pc;
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -23,13 +24,88 @@ body{
     width: 120px;
     cursor: pointer;
 }
-#list ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 200px;
-}
-#list ul li h3 {
+#list li a{
     text-decoration: none;
-    color:  #fff;
+    color: antiquewhite;
     text-transform: uppercase;
+}
+#list ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+#list ul li::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0%;
+    bottom: -10px;
+    transition: 0.5s;
+
+
+}
+#list ul li:hover::after{
+    width: 100%;
+
+}
+#list ul li{
+    margin-top: -67px;
+}
+/*  da ze new zxx */
+#firsth{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: antiquewhite;
+
+}
+#firsth h1{
+    font-size: 60px;
+    margin: 30px;
+}
+#firsth p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+
+
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+
+}
+button:hover{
+    border: none;
 }
